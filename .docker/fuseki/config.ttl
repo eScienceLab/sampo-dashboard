@@ -11,6 +11,7 @@
 @prefix text:    <http://jena.apache.org/text#> .
 @prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
 @prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns11:    <http://schema.org/> .
 
 [] rdf:type fuseki:Server ;
    # Example::
@@ -67,5 +68,6 @@
     text:map (
         [ text:field "text" ; text:predicate rdfs:label ] 
         [ text:field "text" ; text:predicate skos:prefLabel ] 
+        [ text:field "text" ; text:predicate ns11:name ] 
     )
 .
