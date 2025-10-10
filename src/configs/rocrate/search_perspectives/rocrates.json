@@ -1,0 +1,87 @@
+{
+    "id": "rocrates",
+    "endpoint": {
+        "url": "http://host.docker.internal:3030/rocrate/sparql",
+        "useAuth": false,
+        "prefixesFile": "SparqlQueriesPrefixes.js"
+    },
+    "sparqlQueriesFile": "SparqlQueriesRocrates.js",
+    "baseURI": "<BASE_URI>",
+    "URITemplate": "<BASE_URI>/work/<LOCAL_ID>",
+    "facetClass": "<FACET_CLASS>",
+    "frontPageImage": "main_page/works-452x262.jpg",
+    "searchMode": "faceted-search",
+    "enableDynamicLanguageChange": false,
+    "defaultActiveFacets": [],
+    "defaultTab": "table",
+    "defaultInstancePageTab": "table",
+    "resultClasses": {
+        "rocrates": {
+            "paginatedResultsConfig": {
+                "tabID": 0,
+                "component": "ResultTable",
+                "tabPath": "table",
+                "tabIcon": "CalendarViewDay",
+                "propertiesQueryBlock": "rocrateProperties",
+                "pagesize": 10,
+                "sortBy": null,
+                "sortDirection": null
+            },
+            "instanceConfig": {
+                "propertiesQueryBlock": "rocrateProperties",
+                "instancePageResultClasses": {
+                    "instancePageTable": {
+                        "tabID": 0,
+                        "component": "InstancePageTable",
+                        "tabPath": "table",
+                        "tabIcon": "CalendarViewDay"
+                    },
+                    "instancePageExport": {
+                        "tabID": 1,
+                        "component": "Export",
+                        "tabPath": "export",
+                        "tabIcon": "CloudDownload",
+                        "pageType": "instancePage"
+                    }
+                }
+            }
+        },
+        "export": {
+            "tabID": 1,
+            "component": "Export",
+            "tabPath": "export",
+            "tabIcon": "CloudDownload",
+            "resultClass": "perspective1",
+            "facetClass": "perspective1"
+        }
+    },
+    "properties": [
+        {
+            "id": "uri",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": true,
+            "sortValues": true,
+            "numberedList": false,
+            "onlyOnInstancePage": true
+        },
+        {
+            "id": "prefLabel",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": false,
+            "sortValues": true,
+            "numberedList": false,
+            "minWidth": 250
+        }
+    ],
+    "facets": {
+        "prefLabel": {
+            "containerClass": "one",
+            "facetType": "text",
+            "filterType": "textFilter",
+            "sortByPredicate": "skos:prefLabel",
+            "textQueryProperty": "skos:prefLabel"
+        }
+    }
+}
