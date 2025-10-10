@@ -6,9 +6,9 @@
         "prefixesFile": "SparqlQueriesPrefixes.js"
     },
     "sparqlQueriesFile": "SparqlQueriesRocrates.js",
-    "baseURI": "<BASE_URI>",
-    "URITemplate": "<BASE_URI>/work/<LOCAL_ID>",
-    "facetClass": "<FACET_CLASS>",
+    "baseURI": "https://workflowhub.eu/workflows",
+    "URITemplate": "<BASE_URI>/<LOCAL_ID>/ro_crate/",
+    "facetClass": "ns11:Dataset",
     "frontPageImage": "main_page/works-452x262.jpg",
     "searchMode": "faceted-search",
     "enableDynamicLanguageChange": false,
@@ -80,8 +80,8 @@
             "containerClass": "one",
             "facetType": "text",
             "filterType": "textFilter",
-            "sortByPredicate": "skos:prefLabel",
-            "textQueryProperty": "skos:prefLabel"
+            "sortByPredicate": "ns11:name",
+            "textQueryProperty": "ns11:name"
         }
     }
 }
