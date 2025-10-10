@@ -7,4 +7,11 @@ export const prefixes = `
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   PREFIX text: <http://jena.apache.org/text#>
+  PREFIX bioschemas: <https://bioschemas.org/>
+  PREFIX dcterms: <http://purl.org/dc/terms/>
+  PREFIX ns1: <https://bioschemas.org/ComputationalWorkflow#>
+  PREFIX ns11: <http://schema.org/>
+  PREFIX ns2: <https://w3id.org/ro/terms/test#>
+  PREFIX rel: <https://www.w3.org/ns/iana/link-relations/relation#>
+  PREFIX wfrun: <https://w3id.org/ro/terms/workflow-run#>
 `
