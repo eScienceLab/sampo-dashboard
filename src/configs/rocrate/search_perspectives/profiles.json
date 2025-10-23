@@ -94,7 +94,7 @@
             "minWidth": 250
         },
         {
-            "id": "date",
+            "id": "publicationDate",
             "valueType": "object",
             "makeLink": false,
             "externalLink": false,
@@ -136,8 +136,13 @@
         "version": {
             "sortByPredicate": "owl:sameAs/ns11:version"
         },
-        "date": {
-            "sortByPredicate": "owl:sameAs/ns11:datePublished"
+        "publicationDate": {
+            "containerClass": "five",
+            "filterType": "dateNoTimespanFilter",
+            "predicate": "owl:sameAs/ns11:datePublished",
+            "sortByPredicate": "owl:sameAs/ns11:datePublished",
+            "max": "2118-01-01",
+            "min": "2018-01-01"
         },
         "author": {
             "sortByPredicate": "owl:sameAs/ns11:author"

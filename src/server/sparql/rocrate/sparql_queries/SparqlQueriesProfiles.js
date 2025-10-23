@@ -22,8 +22,8 @@ export const profileProperties = `
     }
     UNION
     {
-      ?id owl:sameAs/ns11:datePublished ?date__id .
-      BIND(?date__id AS ?date__prefLabel)
+      ?id owl:sameAs/ns11:datePublished ?publicationDate__id .
+      BIND(CONCAT(STR(DAY(?publicationDate__id)), ".", STR(MONTH(?publicationDate__id)), ".", STR(YEAR(?publicationDate__id))) as ?publicationDate__prefLabel)
     }
     UNION
     {

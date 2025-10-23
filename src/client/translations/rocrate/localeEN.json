@@ -178,7 +178,7 @@
           "label": "Version",
           "description": "The version of the profile."
         },
-        "date": {
+        "publicationDate": {
           "label": "Date of Publication",
           "description": "The date of publication of the profile."
         },
