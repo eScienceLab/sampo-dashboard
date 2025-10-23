@@ -129,6 +129,21 @@
             "sortByPredicate": "owl:sameAs/ns11:name",
             "textQueryPredicate": "owl:sameAs",
             "textQueryProperty": "ns11:name"
+        },
+        "identifier": {
+            "sortByPredicate": "owl:sameAs/ns11:identifier"
+        },
+        "version": {
+            "sortByPredicate": "owl:sameAs/ns11:version"
+        },
+        "date": {
+            "sortByPredicate": "owl:sameAs/ns11:datePublished"
+        },
+        "author": {
+            "sortByPredicate": "owl:sameAs/ns11:author"
+        },
+        "keyword": {
+            "sortByPredicate": "owl:sameAs/ns11:keywords"
         }
     }
 }
