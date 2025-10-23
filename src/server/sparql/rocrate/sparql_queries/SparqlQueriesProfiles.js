@@ -32,6 +32,7 @@ export const profileProperties = `
     }
     UNION
     {
-      # keyword placeholder (TODO)
+      ?id owl:sameAs/ns11:keywords ?keyword__id .
+      BIND(?keyword__id AS ?keyword__prefLabel)
     }
 `
