@@ -2,7 +2,6 @@ import React from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import AdapterMoment from '@mui/lab/AdapterMoment'
 import LocalizationProvider from '@mui/lab/LocalizationProvider'
-import 'moment/locale/fi'
 import SemanticPortal from '../containers/SemanticPortal'
 import portalConfig from '../../configs/portalConfig.json'
 
