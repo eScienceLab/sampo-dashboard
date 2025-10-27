@@ -160,7 +160,7 @@
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "facetLabelPredicate": "ns11:keywords",
+            "literal": true,
             "predicate": "owl:sameAs/ns11:keywords",
             "searchField": true,
             "sortButton": true,
