@@ -145,10 +145,28 @@
             "min": "2018-01-01"
         },
         "author": {
-            "sortByPredicate": "owl:sameAs/ns11:author"
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "facetLabelPredicate": "ns11:name",
+            "predicate": "owl:sameAs/ns11:author",
+            "searchField": true,
+            "sortButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "owl:sameAs/ns11:author/ns11:name",
+            "sortDirection": "desc"
         },
         "keyword": {
-            "sortByPredicate": "owl:sameAs/ns11:keywords"
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "facetLabelPredicate": "ns11:keywords",
+            "predicate": "owl:sameAs/ns11:keywords",
+            "searchField": true,
+            "sortButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "owl:sameAs/ns11:keywords",
+            "sortDirection": "desc"
         }
     }
 }
