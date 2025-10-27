@@ -105,8 +105,8 @@
         {
             "id": "author",
             "valueType": "object",
-            "makeLink": false,
-            "externalLink": false,
+            "makeLink": true,
+            "externalLink": true,
             "sortValues": true,
             "numberedList": false,
             "minWidth": 250
