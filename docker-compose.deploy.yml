@@ -1,0 +1,44 @@
+services:
+  sampo-dashboard: 
+    container_name: rocrate-sampo-dashboard
+    build:
+      context: .
+      dockerfile: .docker/sampo-ui/deploy.dockerfile
+      args:
+        API_URL: ${SAMPO_API_URL}
+    # image: ghcr.io/esciencelab/sampo-dashboard
+    # platform: ${DOCKER_DEFAULT_PLATFORM:-linux/x86_64}
+    restart: unless-stopped
+    tty: true
+    networks:
+      - web-network
+    ports:
+      - "3006:3001"
+    volumes:
+      - node_modules:/usr/src/app/node_modules/
+  
+  jena-fuseki:
+    container_name: rocrate-jena-fuseki
+    image: stain/jena-fuseki
+    platform: ${DOCKER_DEFAULT_PLATFORM:-linux/x86_64}
+    restart: unless-stopped
+    tty: true
+    networks:
+      - web-network
+    ports:
+      - "3030:3030"
+    volumes:
+      - jena-fuseki-data:/fuseki
+      - ./.docker/fuseki/config.ttl:/fuseki/config.ttl
+    environment:
+      ADMIN_PASSWORD: ${FUSEKI_PASSWORD}
+
+networks:
+  web-network:
+    name: rocrate-web-network
+
+volumes:
+  jena-fuseki-data:
+    name: rocrate-data
+  node_modules:
+    name: rocrate-node_modules
