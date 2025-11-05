@@ -3,7 +3,8 @@
     "rootUrl": "",
     "perspectives": {
         "searchPerspectives": [
-            "profiles"
+            "profiles",
+            "workflowRuns"
         ],
         "onlyInstancePages": [
         ]

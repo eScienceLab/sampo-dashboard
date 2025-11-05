@@ -191,6 +191,27 @@
           "description": "The keyword of the profile."
         }
       }
+    },
+    "workflowRuns": {
+      "label": "Workflow Runs",
+      "facetResultsType": "Workflow runs",
+      "shortDescription": "TODO: description",
+      "longDescription": "TODO: A long description",
+      "instancePage": {
+        "label": "Workflow Run",
+        "description": "TODO: Instance page description"
+      },
+      "properties": {
+        "uri": {
+          "label": "URI",
+          "description": "Uniform Resource Identifier"
+        },
+        "prefLabel": {
+          "label": "Name",
+          "description": "The name of the workflow run.",
+          "textFacetInputPlaceholder": "Search..."
+        }
+      }
     }
   },
   "aboutThePortalPartOne": "<h1 class=\"MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom\"> About the Portal </h1> <p class=\"MuiTypography-root MuiTypography-body1 MuiTypography-paragraph\"> Morbi nunc ex, ultrices vitae molestie eu, fringilla quis dolor. Vivamus in enim nibh. Nunc rutrum molestie ex eget dictum. Mauris lectus leo, ultrices in sodales ac, fermentum ut massa. In porta, mauris sed facilisis lacinia, eros magna sollicitudin tortor, quis venenatis nisl ipsum lacinia justo. Duis pretium bibendum consequat. </p> <p class=\"MuiTypography-root MuiTypography-body1 MuiTypography-paragraph\"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Curabitur consectetur aliquet est, ac dapibus ante semper vitae. Sed consequat at est ac lobortis. In vitae metus in ligula pretium vehicula. Aliquam maximus ac massa euismod eleifend. Vestibulum vehicula mattis libero at tempus. </p> <h2 class=\"MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom\"> Data </h2> <p class=\"MuiTypography-root MuiTypography-body1 MuiTypography-paragraph\"> Nullam eu blandit ex, quis consectetur enim. Nulla aliquam, enim non euismod tincidunt, neque eros tincidunt urna, eget elementum diam metus vel elit. Donec dui augue, vehicula a cursus ut, efficitur eget velit. Aliquam pellentesque odio vel metus sodales tempor. Donec in lectus magna. Cras at odio a libero laoreet viverra nec sed lorem. In malesuada tempus dolor. Suspendisse et ligula quis nisi facilisis maximus. Sed dictum justo eu condimentum efficitur. Mauris porttitor ante nec auctor vulputate. Phasellus varius, odio sed egestas bibendum, dolor lacus consequat turpis, ac pulvinar libero lorem maximus nunc. Praesent egestas volutpat leo, vel faucibus dui convallis sed. Ut sed libero eu nisi accumsan mollis. Pellentesque ultricies est non porta luctus. Maecenas eget viverra mauris. </p>",
