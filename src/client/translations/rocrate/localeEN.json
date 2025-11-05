@@ -151,13 +151,13 @@
         }
       }
     },
-    "rocrates": {
-      "label": "RO-Crates",
-      "facetResultsType": "RO-Crates",
-      "shortDescription": "TODO: RO-Crates description",
+    "profiles": {
+      "label": "Profiles",
+      "facetResultsType": "Profiles",
+      "shortDescription": "TODO: description",
       "longDescription": "TODO: A long description",
       "instancePage": {
-        "label": "RO-Crate",
+        "label": "Profile",
         "description": "TODO: Instance page description"
       },
       "properties": {
@@ -166,9 +166,29 @@
           "description": "Uniform Resource Identifier"
         },
         "prefLabel": {
-          "label": "Title",
-          "description": "The name or title of the RO-Crate.",
+          "label": "Name",
+          "description": "The name of the profile.",
           "textFacetInputPlaceholder": "Search..."
+        },
+        "identifier": {
+          "label": "Identifier",
+          "description": "The identifier of the profile."
+        },
+        "version": {
+          "label": "Version",
+          "description": "The version of the profile."
+        },
+        "publicationDate": {
+          "label": "Date of Publication",
+          "description": "The date of publication of the profile."
+        },
+        "author": {
+          "label": "Author",
+          "description": "The author of the profile."
+        },
+        "keyword": {
+          "label": "Keyword",
+          "description": "The keyword of the profile."
         }
       }
     }

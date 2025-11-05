@@ -3,7 +3,7 @@
     "rootUrl": "",
     "perspectives": {
         "searchPerspectives": [
-            "rocrates"
+            "profiles"
         ],
         "onlyInstancePages": [
         ]

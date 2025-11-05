@@ -14,4 +14,6 @@ export const prefixes = `
   PREFIX ns2: <https://w3id.org/ro/terms/test#>
   PREFIX rel: <https://www.w3.org/ns/iana/link-relations/relation#>
   PREFIX wfrun: <https://w3id.org/ro/terms/workflow-run#>
+  PREFIX rocrate: <http://example.org/data/> # TODO: Change URI
+  PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 `

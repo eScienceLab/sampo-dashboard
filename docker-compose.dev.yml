@@ -20,6 +20,8 @@ services:
       - ./src/client/favicon.ico:/usr/src/app/src/client/favicon.ico
       - ./src/configs:/usr/src/app/src/configs/
       - ./src/server/sparql/rocrate:/usr/src/app/src/server/sparql/rocrate/
+      - ./src/client/reducers/general/helpers.js:/usr/src/app/src/client/reducers/general/helpers.js
+      - ./src/client/components/App.js:/usr/src/app/src/client/components/App.js
 
   jena-fuseki:
     container_name: rocrate-jena-fuseki
