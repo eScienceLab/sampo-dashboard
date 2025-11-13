@@ -1,7 +1,7 @@
-profiles. {
+profiles.ro-crate.org {
     reverse_proxy sampo-dashboard:3001
 }
 
-query.oliver-woolland-rse.uk {
+query.ro-crate.org {
     reverse_proxy jena-fuseki:3030
 }
