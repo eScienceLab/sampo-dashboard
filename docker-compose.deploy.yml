@@ -9,6 +9,8 @@ services:
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy-config:/config
+    networks:
+      - web-network
       
   sampo-dashboard: 
     container_name: rocrate-sampo-dashboard
