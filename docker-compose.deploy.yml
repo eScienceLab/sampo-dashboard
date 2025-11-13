@@ -1,4 +1,17 @@
 services:
+  caddy:
+    image: caddy:2.10
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-config:/config
+    networks:
+      - web-network
+      
   sampo-dashboard: 
     container_name: rocrate-sampo-dashboard
     build:
@@ -42,3 +55,4 @@ volumes:
     name: rocrate-data
   node_modules:
     name: rocrate-node_modules
+  caddy-config:
