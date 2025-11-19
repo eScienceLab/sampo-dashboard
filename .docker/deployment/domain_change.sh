@@ -1,9 +1,9 @@
 
 docker_address="http://host.docker.internal:3030/rocrate/sparql"
 local_address="http://localhost:3030/rocrate/sparql"
-server_address="https://<TODO: BASE_URL>/rocrate/sparql"
+server_address="https://query.ro-crate.org/rocrate/sparql"
 
-files=( "src/configs/rocrate/search_perspectives/rocrates.json"
+files=( "src/configs/rocrate/search_perspectives/profiles.json"
         "src/configs/portalConfig.json" )
         
         
