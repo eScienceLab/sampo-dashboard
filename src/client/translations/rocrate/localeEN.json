@@ -210,6 +210,34 @@
           "label": "Name",
           "description": "The name of the workflow run.",
           "textFacetInputPlaceholder": "Search..."
+        },
+        "agent": {
+          "label": "Agent",
+          "description": ""
+        },
+        "startTime": {
+          "label": "Start Time",
+          "description": "The start time of the workflow run."
+        },
+        "endTime": {
+          "label": "End Time",
+          "description": "The end time of the workflow run."
+        },
+        "instrument": {
+          "label": "Instrument",
+          "description": ""
+        },
+        "object": {
+          "label": "Object",
+          "description": ""
+        },
+        "result": {
+          "label": "Result",
+          "description": ""
+        },
+        "description": {
+          "label": "Description",
+          "description": "The description of the workflow run."
         }
       }
     }
