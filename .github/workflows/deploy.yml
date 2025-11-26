@@ -1,0 +1,34 @@
+name: Deploy to Remote (Self-Hosted)
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:  
+
+jobs:
+  deploy:
+    name: Docker Compose Up
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate .env from template
+        env:
+          ENV_FUSEKI_PASSWORD: ${{ secrets.ENV_FUSEKI_PASSWORD }}
+          ENV_SAMPO_API_URL: ${{ vars.ENV_SAMPO_API_URL }}
+        run: |
+          envsubst < env.template > .env
+
+
+      - name: Clean up Docker compose
+        run: |
+          docker compose -f docker-compose.deploy.yml down
+
+      - name: Deploy with Docker Compose
+        run: |
+          docker compose -f docker-compose.deploy.yml pull
+          docker compose -f docker-compose.deploy.yml up -d --build
