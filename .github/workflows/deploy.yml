@@ -16,6 +16,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Change domain paths
+        run:  bash .docker/deployment/domain_change.sh
+
       - name: Generate .env from template
         env:
           ENV_FUSEKI_PASSWORD: ${{ secrets.ENV_FUSEKI_PASSWORD }}
