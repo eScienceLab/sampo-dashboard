@@ -16,6 +16,8 @@ services:
       - ./src/client/translations/rocrate:/usr/src/app/src/client/translations/rocrate/
       - ./src/client/components/perspectives/rocrate:/usr/src/app/src/client/components/perspectives/rocrate/
       - ./src/client/components/main_layout/TopBar.js:/usr/src/app/src/client/components/main_layout/TopBar.js
+      - ./src/client/components/main_layout/TopBarInfoButton.js:/usr/src/app/src/client/components/main_layout/TopBarInfoButton.js
+      - ./src/client/components/main_layout/TopBarLanguageButton.js:/usr/src/app/src/client/components/main_layout/TopBarLanguageButton.js
       - ./src/client/img/rocrate:/usr/src/app/src/client/img/rocrate/
       - ./src/client/favicon.ico:/usr/src/app/src/client/favicon.ico
       - ./src/configs:/usr/src/app/src/configs/
