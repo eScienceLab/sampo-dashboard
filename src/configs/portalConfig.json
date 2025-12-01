@@ -46,7 +46,7 @@
         "paginationToolbarHeight": 37,
         "tableFontSize": "0.8rem",
         "topBar": {
-            "logoImage": "rocrate/logos/uom_logo_white.png",
+            "logoImage": "rocrate/logos/ro-crate.svg",
             "logoTextTransform": "none",
             "hideLogoTextOnMobile": true,
             "showLanguageButton": true,
