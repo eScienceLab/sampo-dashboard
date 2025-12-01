@@ -66,7 +66,6 @@ const Main = props => {
     >
       <Box
         sx={theme => ({
-          background: mainPage.bannerBackround,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -77,7 +76,6 @@ const Main = props => {
           [theme.breakpoints.up('xl')]: {
             height: mainPage.bannerDefaultHeight
           },
-          boxShadow: '0 -15px 15px 0px #bdbdbd inset',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -85,7 +83,7 @@ const Main = props => {
       >
         <Box
           sx={{
-            color: '#fff'
+            color: '#175a5f'
           }}
         >
           <Box

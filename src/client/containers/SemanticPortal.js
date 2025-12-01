@@ -111,6 +111,9 @@ const SemanticPortal = props => {
     }
   })
 
+  const locationArr = location.pathname.split('/').filter(Boolean)
+  const isRoot = locationArr.length === 1 && locationArr[0] === props.options.currentLocale
+
   // trigger a new "page view" event whenever a new page loads
   usePageViews()
 
@@ -124,7 +127,7 @@ const SemanticPortal = props => {
   return (
     <Box
       sx={theme => ({
-        backgroundColor: '#bdbdbd',
+        backgroundColor: isRoot ? '#fff' : '#bdbdbd',
         overflowX: 'hidden',
         minHeight: '100%',
         [theme.breakpoints.up(layoutConfig.hundredPercentHeightBreakPoint)]: {
