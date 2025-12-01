@@ -34,10 +34,10 @@
     "layoutConfig": {
         "colorPalette": {
             "primary": {
-                "main": "#212121"
+                "main": "#f5f5f5"
             },
             "secondary": {
-                "main": "#EB1806"
+                "main": "#175a5f"
             }
         },
         "hundredPercentHeightBreakPoint": 900,
