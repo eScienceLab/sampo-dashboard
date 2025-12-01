@@ -5,9 +5,9 @@
     "description": "TODO: description"
   },
   "appTitle": {
-    "short": "RO-Crate Profiles",
+    "short": "RO-Crate Profile Portal",
     "mobile": "RO-Crate Profiles",
-    "long": "&nbsp; &nbsp; RO-Crate Profile Portal &nbsp; &nbsp;",
+    "long": "Research Object Crate (RO-Crate) Profile Portal",
     "subheading": "<a href='https://www.researchobject.org/ro-crate/' target='_blank' rel='noopener noreferrer'>RO-Crates</a> are a method for packaging research data with their metadata. RO-Crate Profiles define the conventions, types and properties to do this for specific communities and domains."
   },
   "appDescription1": "App description 1",
