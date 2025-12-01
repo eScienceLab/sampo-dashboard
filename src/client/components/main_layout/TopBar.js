@@ -27,8 +27,8 @@ const TopBar = props => {
   // custom style function for utilizing React Router's isActive prop
   const createAppBarButtonStyle = isActive => ({
     whiteSpace: 'nowrap',
-    color: '#fff',
-    border: isActive ? '1px solid #fff' : `1px solid ${theme.palette.primary.main}`
+    color: `${theme.palette.primary.contrastText}`,
+    border: isActive ? `1px solid ${theme.palette.primary.contrastText}` : `1px solid ${theme.palette.primary.main}`
   })
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
@@ -237,7 +237,7 @@ const TopBar = props => {
             {!topBar.hideLogoText &&
               <Typography
                 sx={theme => ({
-                  color: '#fff',
+                  color: theme.palette.primary.contrastText,
                   background: theme.palette.primary.main,
                   whiteSpace: 'nowrap',
                   textTransform: props.layoutConfig.topBar.logoTextTransform,
@@ -299,7 +299,7 @@ const TopBar = props => {
               sx={theme => ({
                 marginLeft: theme.spacing(1),
                 marginRight: theme.spacing(1),
-                borderLeft: '2px solid white'
+                borderLeft: `2px solid ${theme.palette.primary.contrastText}`
               })}
             />
             {renderDesktopTopMenuItem({

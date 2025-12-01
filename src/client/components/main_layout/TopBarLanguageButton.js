@@ -14,7 +14,7 @@ const styles = theme => ({
     textDecoration: 'none'
   },
   appBarButton: {
-    color: 'white !important',
+    color: `${theme.palette.primary.contrastText} !important`,
     border: `1px solid ${theme.palette.primary.main}`
   }
 })
