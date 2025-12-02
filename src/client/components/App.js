@@ -20,7 +20,8 @@ const defaultTheme = createTheme()
 const theme = createTheme({
   palette: {
     primary: {
-      main: colorPalette.primary.main
+      main: colorPalette.primary.main,
+      contrastText: colorPalette.primary.contrastText
     },
     secondary: {
       main: colorPalette.secondary.main

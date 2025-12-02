@@ -10,7 +10,7 @@
     "URITemplate": "<BASE_URI>/profile/<LOCAL_ID>",
     "facetClass": "prof:Profile",
     "defaultConstraint": "FILTER EXISTS { <SUBJECT> owl:sameAs [] }",
-    "frontPageImage": "main_page/works-452x262.jpg",
+    "frontPageImage": "rocrate/main_page/profiles-perspective.png",
     "searchMode": "faceted-search",
     "enableDynamicLanguageChange": false,
     "defaultActiveFacets": [],

@@ -10,7 +10,7 @@ const Footer = props => {
   return (
     <Paper
       sx={theme => ({
-        boxShadow: '0 -20px 20px -20px #333',
+        backgroundColor: '#175a5f',
         borderRadius: 0,
         display: 'flex',
         justifyContent: 'space-evenly',
