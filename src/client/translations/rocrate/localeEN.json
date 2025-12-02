@@ -10,10 +10,11 @@
     "long": "Research Object Crate (RO-Crate) Profile Portal",
     "subheading": "<a href='https://www.researchobject.org/ro-crate/' target='_blank' rel='noopener noreferrer'>RO-Crates</a> are a method for packaging research data with their metadata. RO-Crate Profiles define the conventions, types and properties to do this for specific communities and domains."
   },
+  "appDescription": "Welcome to the RO-Crate Profile Portal. <a href='https://www.researchobject.org/ro-crate/' target='_blank' rel='noopener noreferrer'>Visit the webpage</a> to learn about RO-Crates, or <a href='https://www.researchobject.org/ro-crate/profiles' target='_blank' rel='noopener noreferrer'>read this guide</a> to learn about profiles. Click below to enter the RO-Crate Profile Portal, or read on <a href='https://github.com/eScienceLab/sampo-dashboard?tab=readme-ov-file#submitting-a-profile-to-the-portal' target='_blank' rel='noopener noreferrer'>how to submit your profile</a>",
   "appDescription1": "App description 1",
   "appDescription2": "App description 2",
-  "selectPerspective": "Select a perspective to search and browse the knowledge graph:",
-  "mainPageImageLicence": "Images used under license from Shutterstock.com",
+  "selectPerspective": "",
+  "mainPageImageLicence": "",
   "backendErrorText": "One of the backend services is not available at the moment. Please try again later.",
   "infoHeader": {
     "toggleInstructions": "Click to show or hide instructions"
@@ -154,8 +155,8 @@
     "profiles": {
       "label": "Profiles",
       "facetResultsType": "Profiles",
-      "shortDescription": "TODO: description",
-      "longDescription": "TODO: A long description",
+      "shortDescription": "Click here to enter the profile portal",
+      "longDescription": "<p class=\"MuiTypography-root MuiTypography-body1 MuiTypography-paragraph\"><a href='https://www.researchobject.org/ro-crate/' target='_blank' rel='noopener noreferrer'>RO-Crates</a> are a method for packaging research data with their metadata. RO-Crate Profiles define the conventions, types and properties to do this for specific communities and domains.<br><br>Welcome to the RO-Crate Profile Portal. [Visit the webpage] to learn about RO-Crates, or [read this guide] to learn about profiles. Click below to enter the RO-Crate Profile Portal, or read on [how to submit your profile]</p>",
       "instancePage": {
         "label": "Profile",
         "description": "TODO: Instance page description"
