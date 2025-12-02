@@ -49,20 +49,28 @@
         "topBar": {
             "logoImage": "rocrate/logos/ro-crate.svg",
             "logoTextTransform": "none",
-            "hideLogoTextOnMobile": true,
-            "showLanguageButton": true,
+            "hideLogoTextOnMobile": false,
+            "showLanguageButton": false,
             "showSearchField": false,
-            "feedbackLink": "/",
-            "externalInstructions": false,
-            "externalAboutPage": false,
+            "feedbackLink": "https://github.com/eScienceLab/sampo-dashboard/issues/new",
+            "submitProfileLink": "https://github.com/eScienceLab/sampo-dashboard?tab=readme-ov-file#submitting-a-profile-to-the-portal",
+            "externalInstructions": true,
+            "externalAboutPage": true,
             "reducedHeight": 48,
             "defaultHeight": 64,
-            "mobileMenuBreakpoint": 1360,
+            "mobileMenuBreakpoint": 960,
             "infoDropdown": [
                 {
-                    "id": "about",
-                    "translatedText": "aboutThePortal",
-                    "internalLink": "/about"
+                    "id": "aboutROCrate",
+                    "translatedText": "aboutROCrate",
+                    "translatedUrl": "aboutROCrateUrl",
+                    "externalLink": true
+                },
+                {
+                    "id": "aboutROCrateProfiles",
+                    "translatedText": "aboutROCrateProfiles",
+                    "translatedUrl": "aboutROCrateProfilesUrl",
+                    "externalLink": "true"
                 }
             ]
         },

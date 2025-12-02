@@ -182,21 +182,12 @@ const TopBar = props => {
           externalUrl: props.layoutConfig.topBar.feedbackLink,
           label: intl.get('topBar.feedback')
         })}
-        {infoDropdown.map(item => renderInfoItem(item))}
-        {topBar.externalInstructions && renderMobileMenuItem({
-          id: 'instructions',
-          externalUrl: intl.get('topBar.instructionsUrl'),
-          label: intl.get('topBar.instructions')
+        {renderMobileMenuItem({
+          id: 'submission',
+          externalUrl: props.layoutConfig.topBar.submitProfileLink,
+          label: intl.get('topBar.submitProfile')
         })}
-        {!topBar.externalInstructions &&
-          <MenuItem
-            key='instructions'
-            component={AdapterLink}
-            to={`${props.rootUrl}/instructions`}
-            onClick={handleMobileMenuClose}
-          >
-            {intl.get('topBar.instructions').toUpperCase()}
-          </MenuItem>}
+        {infoDropdown.map(item => renderInfoItem(item))}
       </Menu>
     )
   }
@@ -307,21 +298,12 @@ const TopBar = props => {
               externalUrl: props.layoutConfig.topBar.feedbackLink,
               label: intl.get('topBar.feedback')
             })}
-            <TopBarInfoButton rootUrl={props.rootUrl} layoutConfig={layoutConfig} />
-            {topBar.externalInstructions && renderDesktopTopMenuItem({
-              id: 'instructions',
-              externalUrl: intl.get('topBar.instructionsUrl'),
-              label: intl.get('topBar.instructions')
+            {renderDesktopTopMenuItem({
+              id: 'submission',
+              externalUrl: props.layoutConfig.topBar.submitProfileLink,
+              label: intl.get('topBar.submitProfile')
             })}
-            {!topBar.externalInstructions &&
-              <Button
-                component={AdapterNavLink}
-                to={`${props.rootUrl}/instructions`}
-                isActive={(match, location) => location.pathname.startsWith(`${props.rootUrl}/instructions`)}
-                style={isActive => createAppBarButtonStyle(isActive)}
-              >
-                {intl.get('topBar.instructions')}
-              </Button>}
+            <TopBarInfoButton rootUrl={props.rootUrl} layoutConfig={layoutConfig} />
             {props.layoutConfig.topBar.showLanguageButton &&
               <TopBarLanguageButton
                 currentLocale={currentLocale}
