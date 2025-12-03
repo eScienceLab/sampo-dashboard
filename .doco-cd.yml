@@ -1,0 +1,6 @@
+name: profile-portal
+reference: main 
+webhook_filter: ^refs/heads/main$ 
+working_dir: . 
+compose_files:
+  - docker-compose.deploy.yml
