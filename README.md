@@ -9,7 +9,7 @@ RO-Crates are a method for packaging research data with their metadata. RO-Crate
 The profile portal is accepting contributions! 
 
 > [!IMPORTANT]
-> To be accepted, the profile must be a [Profile Crate](url) accessible on the public internet.
+> To be accepted, the profile must be a [Profile Crate](https://www.researchobject.org/ro-crate/specification/1.2/profiles.html#profile-crate) accessible on the public internet.
 
 To add your profile (or a profile you feel is missing):
 - Open `scripts/profile_urls.txt` in this repo for editing (click file, then click pencil icon)
