@@ -1,0 +1,214 @@
+{
+  "languageLabel": "English",
+  "html": {
+    "title": "RO-Crate Profile Portal",
+    "description": "TODO: description"
+  },
+  "appTitle": {
+    "short": "RO-Crate Profile Portal",
+    "mobile": "RO-Crate Profiles",
+    "long": "Research Object Crate (RO-Crate) Profile Portal",
+    "subheading": "<a href='https://www.researchobject.org/ro-crate/' target='_blank' rel='noopener noreferrer'>RO-Crates</a> are a method for packaging research data with their metadata. RO-Crate Profiles define the conventions, types and properties to do this for specific communities and domains."
+  },
+  "appDescription": "Welcome to the RO-Crate Profile Portal. <a href='https://www.researchobject.org/ro-crate/' target='_blank' rel='noopener noreferrer'>Visit the webpage</a> to learn about RO-Crates, or <a href='https://www.researchobject.org/ro-crate/profiles' target='_blank' rel='noopener noreferrer'>read this guide</a> to learn about profiles. Click below to enter the RO-Crate Profile Portal, or read on <a href='https://github.com/eScienceLab/sampo-dashboard?tab=readme-ov-file#submitting-a-profile-to-the-portal' target='_blank' rel='noopener noreferrer'>how to submit your profile</a>",
+  "appDescription1": "App description 1",
+  "appDescription2": "App description 2",
+  "selectPerspective": "",
+  "mainPageImageLicence": "",
+  "backendErrorText": "One of the backend services is not available at the moment. Please try again later.",
+  "infoHeader": {
+    "toggleInstructions": "Click to show or hide instructions"
+  },
+  "topBar": {
+    "feedback": "feedback",
+    "submitProfile": "submit profile",
+    "info": {
+      "info": "Info",
+      "aboutROCrate": "About RO-Crate",
+      "aboutROCrateUrl": "https://www.researchobject.org/ro-crate/",
+      "aboutROCrateProfiles": "About RO-Crate Profiles",
+      "aboutROCrateProfilesUrl": "https://www.researchobject.org/ro-crate/profiles"
+    },
+    "searchBarPlaceHolder": "Search all content",
+    "searchBarPlaceHolderShort": "Search"
+  },
+  "facetBar": {
+    "results": "Results",
+    "filters": "Filters",
+    "activeFilters": "Active filters:",
+    "removeAllFilters": "Remove all",
+    "narrowDownBy": "Narrow down by",
+    "filterOptions": "Filter options",
+    "filterByName": "Filter by name",
+    "filterByBoundingBox": "Filter by bounding box",
+    "selectionOptions": "Selection options",
+    "selectAlsoSubconcepts": "Automatically select all subconcepts",
+    "doNotSelectSubconcepts": "Do not select subconcepts",
+    "sortingOptions": "Sorting options",
+    "sortAlphabetically": "Sort alphabetically",
+    "sortByNumberOfSearchResults": "Sort by number of search results",
+    "useDisjunction": "Use logical OR between selections",
+    "useConjuction": "Use logical AND between selections",
+    "minYear": "Min year",
+    "maxYear": "Max year",
+    "min": "Min",
+    "max": "Max",
+    "facetSearchFieldPlaceholder": "Search...",
+    "applyFacetSelection": "apply",
+    "pieChart": {
+      "tooltip": "Pie chart"
+    },
+    "barChart": {
+      "tooltip": "Bar chart",
+      "language": {
+        "title": "Language",
+        "xaxisTitle": "Language",
+        "yaxisTitle": "Manuscript count",
+        "seriesTitle": "Manuscript count"
+      }
+    },
+    "lineChart": {
+      "tooltip": "Line chart",
+      "productionTimespan": {
+        "title": "Manuscript production by decade",
+        "xaxisTitle": "Decade",
+        "yaxisTitle": "Manuscript count",
+        "seriesTitle": "Manuscript count"
+      }
+    }
+  },
+  "tabs": {
+    "table": "table",
+    "export": "export"
+  },
+  "table": {
+    "rowsPerPage": "Rows per page",
+    "of": "of"
+  },
+  "lineChart": {
+  },
+  "exportToYasgui": "open the result table query in yasgui sparql editor",
+  "openInLinkedDataBrowser": "open in linked data browser",
+  "resultsAsCSV": "download the search results as a CSV table",
+  "facets": {
+    "dateFacet": {
+      "invalidDate": "Invalid date.",
+      "toBeforeFrom": "The start date must be before the end date.",
+      "minDate": "The earliest date allowed is {minDate}",
+      "maxDate": "The latest date allowed is {maxDate}",
+      "cancel": "Cancel",
+      "fromLabel": "From",
+      "toLabel": "To"
+    },
+    "textFacet": {
+      "inputLabel": "Search by name"
+    },
+    "sliderFacet": {
+      "invalidStartOrEnd": "Min value must be smaller than max value. The smallest value can be {min} and the largest value can be {max}."
+    }
+  },
+  "leafletMap": {
+    "basemaps": {
+      "mapbox": {
+        "light-v10": "Mapbox Light (OpenStreetMap)"
+      },
+      "googleRoadmap": "Google Maps",
+      "topographicalMapNLS": "Topographical map (National Land Survey of Finland)",
+      "backgroundMapNLS": "Background map (National Land Survey of Finland)",
+      "airMapNLS": "Aerial map (National Land Survey of Finland)"
+    },
+    "externalLayers": {
+    },
+    "wrongZoomLevel": "The map zoom level has to at least 11",
+    "wrongZoomLevelFHA": "The map zoom level has to be at least 13 in order to show this layer",
+    "tooManyResults": "More than 500 results, please use clustered map or heatmap"
+  },
+  "instancePageGeneral": {
+    "introduction": "<p class=\"MuiTypography-root MuiTypography-body1 MuiTypography-paragraph\"> This landing page provides a human-readable summary of the data points that link to this {entity}. </p>",
+    "repetition": ""
+  },
+  "deckGlMap": {
+    "arcColouring": "Arc colouring:",
+    "showMoreInformation": "Click to show more information.",
+    "placesMsMigrations": {
+      "legendTitle": "Arc colouring",
+      "legendFrom": "Manuscript production place",
+      "legendTo": "Last known location",
+      "from": "Production place:",
+      "to": "Last known location:",
+      "count": "Manuscript count",
+      "listHeadingSingleInstance": "Manuscript:",
+      "listHeadingMultipleInstances": "Manuscripts:"
+    }
+  },
+  "perspectives": {
+    "fullTextSearch": {
+      "properties": {
+        "prefLabel": {
+          "label": "Label"
+        },
+        "type": {
+          "label": "Type"
+        },
+        "note": {
+          "label": "Note"
+        }
+      }
+    },
+    "profiles": {
+      "label": "Profiles",
+      "facetResultsType": "Profiles",
+      "shortDescription": "Click here to enter the profile portal",
+      "longDescription": "<p class=\"MuiTypography-root MuiTypography-body1 MuiTypography-paragraph\"><a href='https://www.researchobject.org/ro-crate/' target='_blank' rel='noopener noreferrer'>RO-Crates</a> are a method for packaging research data with their metadata. RO-Crate Profiles define the conventions, types and properties to do this for specific communities and domains.<br><br>Welcome to the RO-Crate Profile Portal. [Visit the webpage] to learn about RO-Crates, or [read this guide] to learn about profiles. Click below to enter the RO-Crate Profile Portal, or read on [how to submit your profile]</p>",
+      "instancePage": {
+        "label": "Profile",
+        "description": "TODO: Instance page description"
+      },
+      "properties": {
+        "uri": {
+          "label": "URI",
+          "description": "Uniform Resource Identifier"
+        },
+        "prefLabel": {
+          "label": "Name",
+          "description": "The name of the profile.",
+          "textFacetInputPlaceholder": "Search..."
+        },
+        "identifier": {
+          "label": "Identifier",
+          "description": "The identifier of the profile."
+        },
+        "version": {
+          "label": "Version",
+          "description": "The version of the profile."
+        },
+        "publicationDate": {
+          "label": "Date of Publication",
+          "description": "The date of publication of the profile."
+        },
+        "author": {
+          "label": "Author",
+          "description": "The author of the profile."
+        },
+        "keyword": {
+          "label": "Keyword",
+          "description": "The keyword of the profile."
+        }
+      }
+    }
+  },
+  "aboutThePortalPartOne": "",
+  "aboutThePortalPartTwo": "",
+  "instructions": "",
+  "exportLink": {
+    "viewLabel": "Tab",
+    "viewInstructions": "Choose the tab in which the query will open",
+    "fieldLabel": "Generated link (read-only)",
+    "infoBody": "You can share the query you made by using the link below. The link is generated based on what you have selected for different facets and will open the search view of this perspective with those choices on the selected tab. You can change the opened tab to any of the supported ones using the dropdown menu below. If you make additional choices while on this page, the link will be automatically updated to include those.",
+    "warningTitle": "Generated link might be too long for some browsers",
+    "warningBody": "The current length of the generated link is more than 2,000 characters. Browsers have different limits for the maximum lengths of links they can handle. <strong>This link might not work on all browsers</strong> — you can reduce the length of the link by deselecting some facet options.",
+    "errorTitle": "Generated link is too long",
+    "errorBody": "The current length of the generated link is more than 15,800 characters. <strong>The server will refuse to handle requests that go over certain length limits</strong> — you can reduce the length of the link by deselecting some facet options.",
+    "copyLinkToClipboard": "Copy link to clipboard"
+  }
+}

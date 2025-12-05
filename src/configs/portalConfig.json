@@ -1,0 +1,127 @@
+{
+    "portalID": "rocrate",
+    "rootUrl": "",
+    "perspectives": {
+        "searchPerspectives": [
+            "profiles"
+        ],
+        "onlyInstancePages": [
+        ]
+    },
+    "localeConfig": {
+        "defaultLocale": "en",
+        "readTranslationsFromGoogleSheets": false,
+        "availableLocales": [
+            {
+                "id": "en",
+                "label": "English",
+                "filename": "localeEN.json"
+            }
+        ]
+    },
+    "sitemapConfig": {
+        "baseUrl": "<TODO_DOMAIN_PLACEHOLDER>",
+        "langPrimary": "en",
+        "langSecondary": "en",
+        "outputDir": "./src/server/sitemap_generator",
+        "sitemapUrl": "<TODO_DOMAIN_PLACEHOLDER>/sitemap",
+        "sitemapInstancePageQuery": "sitemapInstancePageQuery"
+    },
+    "knowledgeGraphMetadataConfig": {
+        "showTable": false,
+        "perspective": "perspective1" 
+    },
+    "layoutConfig": {
+        "colorPalette": {
+            "primary": {
+                "main": "#f5f5f5",
+                "contrastText": "#39989f"
+            },
+            "secondary": {
+                "main": "#175a5f"
+            }
+        },
+        "hundredPercentHeightBreakPoint": 900,
+        "reducedHeightBreakpoint": 1920,
+        "tabHeight": 58,
+        "paginationToolbarHeight": 37,
+        "tableFontSize": "0.8rem",
+        "topBar": {
+            "logoImage": "rocrate/logos/ro-crate.svg",
+            "logoTextTransform": "none",
+            "hideLogoTextOnMobile": false,
+            "showLanguageButton": false,
+            "showSearchField": false,
+            "feedbackLink": "https://github.com/eScienceLab/sampo-dashboard/issues/new",
+            "submitProfileLink": "https://github.com/eScienceLab/sampo-dashboard?tab=readme-ov-file#submitting-a-profile-to-the-portal",
+            "externalInstructions": true,
+            "externalAboutPage": true,
+            "reducedHeight": 48,
+            "defaultHeight": 64,
+            "mobileMenuBreakpoint": 960,
+            "infoDropdown": [
+                {
+                    "id": "aboutROCrate",
+                    "translatedText": "aboutROCrate",
+                    "translatedUrl": "aboutROCrateUrl",
+                    "externalLink": true
+                },
+                {
+                    "id": "aboutROCrateProfiles",
+                    "translatedText": "aboutROCrateProfiles",
+                    "translatedUrl": "aboutROCrateProfilesUrl",
+                    "externalLink": "true"
+                }
+            ]
+        },
+        "mainPage": {
+            "bannerImage": "rocrate/main_page/banner.png",
+            "bannerBackround": "linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url(<BANNER_IMAGE_URL)",
+            "bannerMobileHeight": 150,
+            "bannerReducedHeight": 220,
+            "bannerDefaultHeight": 300,
+            "wrapSubheading": true
+        },
+        "infoHeader": {
+            "default": {
+                "height": 49,
+                "expandedContentHeight": 160,
+                "headingVariant": "h4",
+                "infoIconFontSize": 40
+            },
+            "reducedHeight": {
+                "height": 40,
+                "expandedContentHeight": 100,
+                "headingVariant": "h6",
+                "infoIconFontSize": 32
+            }
+        },
+        "footer": {
+            "reducedHeight": 44,
+            "defaultHeight": 64
+        }
+    },
+    "mapboxConfig": {
+        "mapboxStyle": "light-v10"
+    },
+    "yasguiConfig": {
+        "yasguiBaseURL": "https://yasgui.triply.cc",
+        "yasguiParams": {
+            "contentTypeConstruct": "text/turtle",
+            "contentTypeSelect": "application/sparql-results+json",
+            "endpoint": "http://localhost:3030/rocrate/sparql",
+            "requestMethod": "POST",
+            "tabTitle": "Exported query"
+        }
+    },
+    "documentFinderConfig": {
+        "apiURL": "<DOCUMENT_FINDER_API_URL>"
+    },
+    "temporalMapConfig": {
+        "sliderDuration": {
+            "halfSpeed": 1200,
+            "normalSpeed": 600,
+            "doubleSpeed": 300
+        }
+    }
+}
