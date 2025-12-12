@@ -1,11 +1,19 @@
+import os
 import re
 import validators
 import requests
+import argparse
 
+from dotenv import load_dotenv
 from hashlib import md5
 from rdflib import Graph, URIRef, Literal, XSD, RDF, OWL
 from urllib.parse import urljoin
 
+
+parser = argparse.ArgumentParser(description="Parse profile Ro Crate and upload graph to Jena Fuseki instance")
+parser.add_argument("--dry-run", action="store_true")
+args = parser.parse_args()
+load_dotenv()
 
 g = Graph()
 profile_class = URIRef("http://www.w3.org/ns/dx/prof/Profile")
@@ -68,3 +76,11 @@ for s, p, o in g.triples((None, None, None)):
         g.add((new_s, OWL.sameAs, s))
 
 ttl_data = g.serialize(format="turtle")
+if not args.dry_run:
+    FUSEKI_ENDPOINT = os.getenv('FUSEKI_UPLOAD_ENDPOINT')
+    FUSEKI_PASSWORD = os.getenv('FUSEKI_PASSWORD')
+
+    response = requests.put(FUSEKI_ENDPOINT, data=ttl_data, 
+                            headers={"Content-Type": "text/turtle"}, 
+                            auth=("admin", FUSEKI_PASSWORD))
+    response.raise_for_status()
