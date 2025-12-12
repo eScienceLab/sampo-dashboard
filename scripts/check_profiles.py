@@ -34,9 +34,13 @@ for url in profile_urls:
     if "json" not in content_type:
         raise ValueError(f"{url} does not return JSON-LD (Content type: {content_type})")
 
-for url in profile_urls: 
+    temp_g = Graph()
     base_iri = urljoin(url, '.') if url.endswith("ro-crate-metadata.json") else f"{url.rstrip('/')}/"
-    g.parse(url, format="json-ld", publicID=base_iri)
+    temp_g.parse(url, format="json-ld", publicID=base_iri)
+    if any(temp_g.subjects(RDF.type, profile_class)):
+        g += temp_g
+    else:
+        raise ValueError(f"No profile entity found in {url}")
 
 datetime_pattern = re.compile(r"^-?\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})?$")
 date_pattern = re.compile(r"^-?\d{4}-\d{2}-\d{2}$")
