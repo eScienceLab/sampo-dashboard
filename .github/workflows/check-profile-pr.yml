@@ -17,4 +17,4 @@ jobs:
       - name: Run script
         run: |
           cd scripts
-          python check_profiles.py
+          python upload_profiles.py --dry-run
