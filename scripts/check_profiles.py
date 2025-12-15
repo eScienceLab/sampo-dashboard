@@ -1,4 +1,6 @@
 import re
+import validators
+import requests
 
 from hashlib import md5
 from rdflib import Graph, URIRef, Literal, XSD, RDF, OWL
@@ -11,8 +13,34 @@ profile_class = URIRef("http://www.w3.org/ns/dx/prof/Profile")
 with open("profile_urls.txt", "r") as file:
     profile_urls = [line.strip() for line in file if line.strip()]
 
-for url in profile_urls: 
-    g.parse(url, format="json-ld", publicID=urljoin(url, '.'))
+for url in profile_urls:
+    if not validators.url(url):
+        raise ValueError(f"{url} is not an URL")
+
+    headers = {
+        "Accept": "application/ld+json, application/json"
+    }
+
+    try:
+        response = requests.head(url, headers=headers, allow_redirects=True)
+    except requests.RequestException as e:
+        raise ValueError(f"Unable to reach {url} (Error: {e})")
+    
+    # Fallback
+    if response.status_code >= 400:
+        response = requests.get(url, headers=headers)
+
+    content_type = response.headers.get("Content-Type", "").lower()
+    if "json" not in content_type:
+        raise ValueError(f"{url} does not return JSON-LD (Content type: {content_type})")
+
+    temp_g = Graph()
+    base_iri = urljoin(url, '.') if url.endswith("ro-crate-metadata.json") else f"{url.rstrip('/')}/"
+    temp_g.parse(url, format="json-ld", publicID=base_iri)
+    if any(temp_g.subjects(RDF.type, profile_class)):
+        g += temp_g
+    else:
+        raise ValueError(f"No profile entity found in {url}")
 
 datetime_pattern = re.compile(r"^-?\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})?$")
 date_pattern = re.compile(r"^-?\d{4}-\d{2}-\d{2}$")
