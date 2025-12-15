@@ -1,8 +1,9 @@
-name: Check added profile link
+name: Upload to Jena Fuseki
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
     paths:
       - 'scripts/profile_urls.txt'
   workflow_dispatch:
@@ -15,5 +16,9 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install -r requirements.workflow.txt
       - name: Run script
-        run: python upload_profiles.py --dry-run
+        run: python upload_profiles.py
         working-directory: ./scripts
+        env:
+          FUSEKI_UPLOAD_ENDPOINT: ${{ vars.ENV_FUSEKI_UPLOAD_ENDPOINT }}
+          FUSEKI_PASSWORD: ${{ secrets.ENV_FUSEKI_PASSWORD }}
+

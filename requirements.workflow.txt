@@ -12,6 +12,8 @@ idna==3.11
     # via requests
 pyparsing==3.2.5
     # via rdflib
+python-dotenv==1.2.1
+    # via -r requirements.workflow.in
 rdflib==7.4.0
     # via -r requirements.workflow.in
 requests==2.32.5
