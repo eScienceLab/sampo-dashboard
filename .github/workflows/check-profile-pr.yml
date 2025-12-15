@@ -15,6 +15,5 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install -r requirements.workflow.txt
       - name: Run script
-        run: |
-          cd scripts
-          python upload_profiles.py --dry-run
+        run: python upload_profiles.py --dry-run
+        working-directory: ./scripts

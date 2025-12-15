@@ -16,9 +16,8 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install -r requirements.workflow.txt
       - name: Run script
-        run: |
-          cd scripts
-          python upload_profiles.py
+        run: python upload_profiles.py
+        working-directory: ./scripts
         env:
           FUSEKI_UPLOAD_ENDPOINT: ${{ vars.ENV_FUSEKI_UPLOAD_ENDPOINT }}
           FUSEKI_PASSWORD: ${{ secrets.ENV_FUSEKI_PASSWORD }}
