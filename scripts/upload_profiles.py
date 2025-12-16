@@ -76,7 +76,7 @@ def main(dry_run):
         FUSEKI_ENDPOINT = os.getenv('FUSEKI_UPLOAD_ENDPOINT')
         FUSEKI_PASSWORD = os.getenv('FUSEKI_PASSWORD')
 
-        response = requests.put(FUSEKI_ENDPOINT, data=ttl_data, 
+        response = requests.post(FUSEKI_ENDPOINT, data=ttl_data, 
                                 headers={"Content-Type": "text/turtle"}, 
                                 auth=("admin", FUSEKI_PASSWORD))
         response.raise_for_status()

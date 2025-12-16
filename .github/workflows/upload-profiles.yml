@@ -8,7 +8,7 @@ on:
       - 'scripts/profile_urls.txt'
   workflow_dispatch:
 jobs:
-  check:
+  upload:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
