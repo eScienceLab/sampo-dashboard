@@ -4,11 +4,19 @@ import validators
 import requests
 import argparse
 
+from datetime import datetime, date
 from dotenv import load_dotenv
 from hashlib import md5
-from rdflib import Graph, URIRef, Literal, XSD, RDF, OWL
+from rdflib import Graph, URIRef, Literal, XSD, RDF, OWL, Namespace
 from urllib.parse import urljoin
 
+
+SCHEMA = Namespace("http://schema.org/")
+
+def map_sameas_uri(uri):
+        id = md5(uri.encode('utf-8')).hexdigest()
+        new_uri = URIRef(f"http://example.org/data/profile/{id}") # TODO: Change URI
+        return new_uri
 
 def main(dry_run):
     g = Graph()
@@ -46,11 +54,12 @@ def main(dry_run):
         else:
             raise ValueError(f"No profile entity found in {url}")
 
+    g.parse("gaps.ttl", format="turtle")
+
     datetime_pattern = re.compile(r"^-?\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})?$")
     date_pattern = re.compile(r"^-?\d{4}-\d{2}-\d{2}$")
     time_pattern = re.compile(r"^\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})?$")
 
-    # Add type to datetime, date and time data
     for s, p, o in g.triples((None, None, None)):
         typed_o = None
 
@@ -61,15 +70,26 @@ def main(dry_run):
         elif time_pattern.match(o):
             typed_o = Literal(o, datatype=XSD.time)
 
+        # Add type to datetime, date and time data
         if typed_o is not None:
             g.add((s, p, typed_o))
             g.remove((s, p, o))
 
+        # Create profile URI for use in the profile portal
         if p == RDF.type and o == profile_class:
-            id = md5(s.encode('utf-8')).hexdigest()
-            new_s = URIRef(f"http://example.org/data/profile/{id}") # TODO: Change URI
+            new_s = map_sameas_uri(s)
             g.add((new_s, RDF.type, o))
             g.add((new_s, OWL.sameAs, s))
+
+        # Add triple <new profile URI> schema:datePublished "yyyy-mm-dd"^^xsd:date
+        if p == SCHEMA.datePublished and typed_o is not None:
+            value = typed_o.toPython()
+            if isinstance(value, datetime):
+                new_s = map_sameas_uri(s)
+                g.add((new_s, p, Literal(value.date(), datatype=XSD.date)))
+            if isinstance(value, date):
+                new_s = map_sameas_uri(s)
+                g.add((new_s, p, Literal(value.isoformat(), datatype=XSD.date)))
 
     ttl_data = g.serialize(format="turtle")
     if not dry_run:

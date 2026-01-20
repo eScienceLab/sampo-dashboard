@@ -139,7 +139,7 @@
         "publicationDate": {
             "containerClass": "five",
             "filterType": "dateNoTimespanFilter",
-            "predicate": "owl:sameAs/ns11:datePublished",
+            "predicate": "ns11:datePublished",
             "sortByPredicate": "owl:sameAs/ns11:datePublished",
             "max": "2118-01-01",
             "min": "2018-01-01"

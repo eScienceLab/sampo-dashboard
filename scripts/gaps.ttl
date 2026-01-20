@@ -1,0 +1,17 @@
+@prefix schema: <http://schema.org/> .
+
+<https://w3id.org/workflowhub/workflow-ro-crate/1.0> 
+    a schema:Profile ;
+    schema:keywords "workflow" .
+<https://w3id.org/ro/wfrun/process/0.5> 
+    schema:datePublished "2024-06-19";
+    schema:keywords "provenance", "process", "informatics" .
+<https://w3id.org/ro/wfrun/workflow/0.5> 
+    schema:datePublished "2024-06-19";
+    schema:keywords "workflow", "provenance", "workflow execution", "process", "informatics" .
+<https://w3id.org/ro/wfrun/provenance/0.5> 
+    schema:datePublished "2024-06-19";
+    schema:keywords "workflow", "provenance", "workflow execution", "process", "informatics" .
+<https://w3id.org/5s-crate/0.4> 
+    schema:identifier "https://w3id.org/5s-crate/0.4" ;
+    schema:keywords "workflow execution", "five safes", "transparency", "sensitive data", "trusted research environment", "secure data environment", "data safe haven" .
