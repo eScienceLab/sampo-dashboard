@@ -6,7 +6,7 @@
         "prefixesFile": "SparqlQueriesPrefixes.js"
     },
     "sparqlQueriesFile": "SparqlQueriesProfiles.js",
-    "baseURI": "http://example.org/data",
+    "baseURI": "https://profiles.ro-crate.org/data",
     "URITemplate": "<BASE_URI>/profile/<LOCAL_ID>",
     "facetClass": "prof:Profile",
     "defaultConstraint": "FILTER EXISTS { <SUBJECT> owl:sameAs [] }",

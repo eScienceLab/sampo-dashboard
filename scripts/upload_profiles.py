@@ -15,7 +15,7 @@ SCHEMA = Namespace("http://schema.org/")
 
 def map_sameas_uri(uri):
         id = md5(uri.encode('utf-8')).hexdigest()
-        new_uri = URIRef(f"http://example.org/data/profile/{id}") # TODO: Change URI
+        new_uri = URIRef(f"https://profiles.ro-crate.org/data/profile/{id}")
         return new_uri
 
 def main(dry_run):
