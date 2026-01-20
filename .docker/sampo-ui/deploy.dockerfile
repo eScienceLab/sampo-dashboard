@@ -1,6 +1,6 @@
-FROM node:16.13.0-alpine
+FROM node:22.21.1-alpine
 ARG API_URL
-ARG VERSION="3.0.0"
+ARG VERSION="3.0.0-1"
 
 # Based on https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
@@ -11,7 +11,7 @@ WORKDIR /usr/src/app
 # mv commands: install app dependencies, Babel 7 presets and plugins, and bundle app source
 # Remove redundant files
 RUN <<EOF
-wget https://github.com/SemanticComputing/sampo-ui/archive/refs/tags/v$VERSION.zip
+wget https://github.com/UoMResearchIT/sampo-ui/archive/refs/tags/v$VERSION.zip
 unzip v$VERSION.zip
 mv ./sampo-ui-$VERSION/package*.json ./
 mv ./sampo-ui-$VERSION/webpack*.js ./
