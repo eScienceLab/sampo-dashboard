@@ -35,10 +35,11 @@
     "layoutConfig": {
         "colorPalette": {
             "primary": {
-                "main": "#212121"
+                "main": "#f5f5f5",
+                "contrastText": "#39989f"
             },
             "secondary": {
-                "main": "#EB1806"
+                "main": "#175a5f"
             }
         },
         "hundredPercentHeightBreakPoint": 900,
@@ -47,27 +48,35 @@
         "paginationToolbarHeight": 37,
         "tableFontSize": "0.8rem",
         "topBar": {
-            "logoImage": "rocrate/logos/uom_logo_white.png",
+            "logoImage": "rocrate/logos/ro-crate.svg",
             "logoTextTransform": "none",
-            "hideLogoTextOnMobile": true,
-            "showLanguageButton": true,
+            "hideLogoTextOnMobile": false,
+            "showLanguageButton": false,
             "showSearchField": false,
-            "feedbackLink": "/",
-            "externalInstructions": false,
-            "externalAboutPage": false,
+            "feedbackLink": "https://github.com/eScienceLab/sampo-dashboard/issues/new",
+            "submitProfileLink": "https://github.com/eScienceLab/sampo-dashboard?tab=readme-ov-file#submitting-a-profile-to-the-portal",
+            "externalInstructions": true,
+            "externalAboutPage": true,
             "reducedHeight": 48,
             "defaultHeight": 64,
-            "mobileMenuBreakpoint": 1360,
+            "mobileMenuBreakpoint": 960,
             "infoDropdown": [
                 {
-                    "id": "about",
-                    "translatedText": "aboutThePortal",
-                    "internalLink": "/about"
+                    "id": "aboutROCrate",
+                    "translatedText": "aboutROCrate",
+                    "translatedUrl": "aboutROCrateUrl",
+                    "externalLink": true
+                },
+                {
+                    "id": "aboutROCrateProfiles",
+                    "translatedText": "aboutROCrateProfiles",
+                    "translatedUrl": "aboutROCrateProfilesUrl",
+                    "externalLink": "true"
                 }
             ]
         },
         "mainPage": {
-            "bannerImage": "main_page/mmm-banner.jpg",
+            "bannerImage": "rocrate/main_page/banner.png",
             "bannerBackround": "linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url(<BANNER_IMAGE_URL)",
             "bannerMobileHeight": 150,
             "bannerReducedHeight": 220,

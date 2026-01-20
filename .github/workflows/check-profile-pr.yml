@@ -1,0 +1,19 @@
+name: Check added profile link
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'scripts/profile_urls.txt'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: python3 -m pip install -r requirements.workflow.txt
+      - name: Run script
+        run: python upload_profiles.py --dry-run
+        working-directory: ./scripts

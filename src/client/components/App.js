@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import AdapterMoment from '@mui/lab/AdapterMoment'
-import LocalizationProvider from '@mui/lab/LocalizationProvider'
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import SemanticPortal from '../containers/SemanticPortal'
 import portalConfig from '../../configs/portalConfig.json'
 
@@ -20,7 +20,8 @@ const defaultTheme = createTheme()
 const theme = createTheme({
   palette: {
     primary: {
-      main: colorPalette.primary.main
+      main: colorPalette.primary.main,
+      contrastText: colorPalette.primary.contrastText
     },
     secondary: {
       main: colorPalette.secondary.main
