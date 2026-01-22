@@ -6,7 +6,7 @@
         "prefixesFile": "SparqlQueriesPrefixes.js"
     },
     "sparqlQueriesFile": "SparqlQueriesProfiles.js",
-    "baseURI": "http://example.org/data",
+    "baseURI": "https://profiles.ro-crate.org/data",
     "URITemplate": "<BASE_URI>/profile/<LOCAL_ID>",
     "facetClass": "prof:Profile",
     "defaultConstraint": "FILTER EXISTS { <SUBJECT> owl:sameAs [] }",
@@ -139,7 +139,7 @@
         "publicationDate": {
             "containerClass": "five",
             "filterType": "dateNoTimespanFilter",
-            "predicate": "owl:sameAs/ns11:datePublished",
+            "predicate": "ns11:datePublished",
             "sortByPredicate": "owl:sameAs/ns11:datePublished",
             "max": "2118-01-01",
             "min": "2018-01-01"
