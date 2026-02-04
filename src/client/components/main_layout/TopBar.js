@@ -97,24 +97,18 @@ const TopBar = props => {
   const renderDesktopTopMenuItem = perspective => {
     if (has(perspective, 'externalUrl')) {
       return (
-        <Box
+        <Button
           component='a'
           key={perspective.id}
           href={perspective.externalUrl}
           target='_blank'
           rel='noopener noreferrer'
-          sx={{
-            textDecoration: 'none'
-          }}
+          sx={createAppBarButtonStyle(false)}
         >
-          <Button
-            sx={createAppBarButtonStyle(false)}
-          >
-            {perspective.label
-              ? perspective.label
-              : intl.get(`perspectives.${perspective.id}.label`).toUpperCase()}
-          </Button>
-        </Box>
+          {perspective.label
+            ? perspective.label
+            : intl.get(`perspectives.${perspective.id}.label`).toUpperCase()}
+        </Button>
       )
     } else {
       return (
